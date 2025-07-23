@@ -1,0 +1,41 @@
+button.btn {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+button.btn:disabled {
+  background-color: light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
+  color: light-dark(rgba(16, 16, 16, 0.3), rgba(255, 255, 255, 0.3));
+  border-color: light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
+}
+
+.btn-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0%;
+  height: 100%;
+  background-color: var(--bg-color);
+  transition: left 0.5s ease-in-out, width 0.5s ease-in-out;
+  z-index: 0;
+}
+
+button.btn:not(:disabled) .btn-text {
+  position: relative;
+  z-index: 1;
+  color: var(--bg-color);
+  transition: color 0.003s ease 0.25s;
+}
+
+button.btn:not(:disabled):hover .btn-bg {
+  left: 0;
+  width: 100%;
+}
+
+button.btn:not(:disabled):hover .btn-text {
+  color: var(--text-color);
+}

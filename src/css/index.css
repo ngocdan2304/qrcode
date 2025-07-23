@@ -1,0 +1,186 @@
+@import url("./snow.css");
+@import url("./button.css");
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --bg-color: #ffffff;
+  --text-color: #000000;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s, color 0.3s;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+main {
+  width: 100%;
+  max-width: 1280px;
+  min-height: calc(100vh - 2em);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: none;
+}
+
+input:focus {
+  border: 1px solid #80bdff;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.buy-a-coffee {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.buy-a-coffee .text {
+  font-size: 14px;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-text {
+  animation: textPulse 2s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+  0% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  a .logo {
+    padding: 0;
+    max-width: 100px;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  .buy-a-coffee .text {
+    font-size: 12px;
+  }
+}
+
+
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #0f0;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  padding: 0.5rem 0;
+}
+
+.marquee__inner {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.marquee__text {
+  display: inline-block;
+  padding-right: 16px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
