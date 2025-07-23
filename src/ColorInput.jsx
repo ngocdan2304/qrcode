@@ -4,6 +4,7 @@ export default function ColorfulPlaceholderInput({
   placeholder = "Nhập nội dung...",
   interval = 300,
   defaultColor = "#999",
+  onChangeInput = () => { },
   ...props
 }) {
   const [value, setValue] = useState("");
@@ -25,11 +26,16 @@ export default function ColorfulPlaceholderInput({
     return () => clearInterval(handle);
   }, [placeholder, interval, value]);
 
+  function onChange(e) {
+    setValue(e.target.value);
+    typeof onChangeInput == "function" && onChangeInput(e)
+  }
+
   return (
     <div style={{ position: "relative", display: "inline-block" }}>
       <input
         value={value}
-        onChange={e => setValue(e.target.value)}
+        onChange={onChange}
         style={{
           position: "relative",
           zIndex: 1,

@@ -65,7 +65,7 @@ function App() {
           type="text"
           placeholder="The URL needs to generate a QR Code"
           value={url}
-          onChange={handleChange}
+          onChangeInput={handleChange}
         />
         <AnimatedButton
           onClick={handleSubmit}
