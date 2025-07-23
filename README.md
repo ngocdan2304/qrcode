@@ -1,8 +1,12 @@
-# React + Vite
+# Free Online QR Code Generator / Trình Tạo Mã QR Miễn Phí Online
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### 📖 Introduction  
+A simple, free, and powerful online tool to generate QR codes. Customize colors, add logos, and export high-quality PNG or SVG. No registration required.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ⚙️ Features  
+- **Generate QR Codes** for URLs, text, email, phone, vCard…  
+- **Color & Logo**: choose foreground/background colors, upload your logo.  
+- **Export Options**: download as PNG or SVG.  
+- **Responsive UI**: works on desktop & mobile.  
+- **No Signup**: get your code instantly, no account needed.  
+- **Lightweight & Fast**: minimal dependencies, loads in under 1s.
